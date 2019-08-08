@@ -1,0 +1,16 @@
+[package]
+name = "rippled-rs"
+version = "0.1.0"
+authors = ["zTgx <747674262@qq.com>"]
+edition = "2018"
+repository = "https://github.com/zTgx/rippled-rs.git"
+readme = "README.md"
+keywords = ["signing", "ed25519", "rippled", "algorithm", "blockchain", "secp256k1", "crypto"]
+categories = [ "cryptography", "algorithms" ]
+license = "MIT/Apache-2.0"
+exclude = [ "/.travis.yml" ]
+description = "Rippled signing algorithm in Rust"
+
+[dependencies]
+secp256k1 = "0.15.1"
+ed25519-dalek = "0.9.1"
