@@ -1,5 +1,6 @@
 #[macro_use]
 extern crate lazy_static;
+extern crate ws;
 
 use serde_json::{Value};
 use serde_json::json;
@@ -34,3 +35,4 @@ pub mod rpc;
 pub mod crypto;
 pub mod net;
 pub mod protocol;
+pub mod server;
