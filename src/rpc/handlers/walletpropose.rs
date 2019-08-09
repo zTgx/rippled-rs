@@ -68,7 +68,7 @@ pub fn do_propose(params: &Value) -> Result<Value, &'static str> {
     // let seed = v["seed"];
     // let key_type = v["key_type"];
 
-    let mut key_code = Some( KeyType::Secp256k1 );
+    let mut key_code;// = Some( KeyType::Secp256k1 );
     if params[JSS_KEY_TYPE].is_null() == false {
         if ! params[JSS_KEY_TYPE].is_string() {
             return Error::expected_field_error(JSS_KEY_TYPE, "string");

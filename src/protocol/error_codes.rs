@@ -49,7 +49,7 @@ impl Error {
     pub fn inject_error (code: ErrorCodeI, message: &String) -> Result<Value, &'static str> {
         // let info: ErrorInfo = ErrorInfo::new (get_error_info (code));
 
-        let mut json = json!({
+        let json = json!({
             ERROR: "1",
             ERROR_CODE: "000",
             ERROR_MESSAGE: "tesSUCCESS",

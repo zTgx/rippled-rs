@@ -21,7 +21,7 @@ lazy_static! {
 }
 
 pub fn one() -> Value {
-    let mut json = json!({
+    let json = json!({
         ERROR: "1",
         ERROR_CODE: "000",
         ERROR_MESSAGE: "tesSUCCESS",
@@ -36,3 +36,6 @@ pub mod crypto;
 pub mod net;
 pub mod protocol;
 pub mod server;
+pub mod nodestore;
+pub mod core;
+pub mod app;
