@@ -1,3 +1,4 @@
+extern crate rippled_rs;
 use rippled_rs::rpc::handlers::walletpropose::wallet_propose;
 use serde_json::{Value};
 use rippled_rs::server::server::*;
