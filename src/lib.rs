@@ -1,6 +1,36 @@
-extern crate ed25519_dalek;
+#[macro_use]
+extern crate lazy_static;
 
-pub fn wallet_propose() -> Result<&'static str, &'static str> {
+use serde_json::{Value};
+use serde_json::json;
+use crate::protocol::error_codes::*;
 
-    Ok("ok")
+lazy_static! {
+    // pub static ref DEFAUT_VALUE: Value = {
+    //     let mut json = json!({
+    //         ERROR: "1",
+    //         ERROR_CODE: "000",
+    //         ERROR_MESSAGE: "tesSUCCESS",
+    //     });
+    //
+    //     json
+    // };
+
+    static ref DEFAUT_VALUE: Value = one();
 }
+
+pub fn one() -> Value {
+    let mut json = json!({
+        ERROR: "1",
+        ERROR_CODE: "000",
+        ERROR_MESSAGE: "tesSUCCESS",
+    });
+
+    json
+}
+
+
+pub mod rpc;
+pub mod crypto;
+pub mod net;
+pub mod protocol;
